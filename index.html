@@ -31,7 +31,7 @@
           <p class="card__job">UX Engineer</p>
         </footer>
       </article>
-      <article class="card">
+      <article class="card card--hide">
         <header class="card__header">
           <img
             class="card__image"
@@ -49,18 +49,21 @@
           <p class="card__job">Junior Front-end Developer</p>
         </footer>
       </article>
-      <div class="slide-arrows">
-        <img
-          class="slide-arrows__left-arrow"
-          src="/assets/images/icon-prev.svg"
-          alt=""
-        />
-        <img
-          class="slide-arrows__right-arrow"
-          src="/assets/images/icon-next.svg"
-          alt=""
-        />
-      </div>
     </div>
+    <div id="slide-arrows" class="slide-arrows">
+      <img
+        data-direction="left"
+        class="slide-arrows__left-arrow"
+        src="/assets/images/icon-prev.svg"
+        alt=""
+      />
+      <img
+        data-direction="right"
+        class="slide-arrows__right-arrow"
+        src="/assets/images/icon-next.svg"
+        alt=""
+      />
+    </div>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
