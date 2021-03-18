@@ -15,7 +15,13 @@ body {
   min-height: 100vh;
   overflow: hidden;
 }
-
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .card-container {
   padding: 30px 0;
   height: 100vh;
@@ -23,15 +29,35 @@ body {
   overflow: hidden;
 }
 
+@media screen and (min-width: 768px) {
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    overflow: visible;
+  }
+}
+
 .card {
-  /* background-color: #fff; */
   height: 100vh;
   position: absolute;
+  transform: translateX(0);
   transition: transform 0.5s;
 }
 
+@media screen and (min-width: 768px) {
+  .card {
+    height: 325px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 710px;
+  }
+}
+
 .card--hide {
-  transform: translateX(-100%);
+  transform: translateX(-100vw);
 }
 
 .card::after {
@@ -63,6 +89,13 @@ body {
   box-shadow: 0 20px 20px -15px rgba(83, 83, 102, 0.3);
 }
 
+@media screen and (min-width: 768px) {
+  .card__image {
+    max-width: 65%;
+    padding-right: 10px;
+  }
+}
+
 .card__description {
   position: relative;
   font-size: 300;
@@ -75,6 +108,13 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .card__description {
+    left: 55px;
+    text-align: left;
+  }
 }
 
 .card__description::before {
@@ -94,16 +134,40 @@ body {
   font-size: 11px;
 }
 
+@media screen and (min-width: 768px) {
+  .card__footer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 120px;
+    left: 75px;
+    width: 950px;
+    /* background-color: red; */
+  }
+}
+
 .card__name,
 .card__job {
   margin: 0;
   font-weight: 700;
   color: var(--dark-text);
 }
+@media screen and (min-width: 768px) {
+  .card__name {
+    margin-right: 10px;
+  }
+}
 
 .card__job {
   color: var(--light-text);
   font-size: 13px;
+}
+
+@media screen and (min-width: 768px) {
+  .card__job {
+    margin-right: 10px;
+    margin-top: 3px;
+  }
 }
 
 .slide-arrows {
@@ -120,6 +184,13 @@ body {
   align-items: center;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(83, 83, 102, 0.3);
+}
+
+@media screen and (min-width: 768px) {
+  .slide-arrows {
+    top: 500px;
+    left: 60%;
+  }
 }
 
 .slide-arrows img {
